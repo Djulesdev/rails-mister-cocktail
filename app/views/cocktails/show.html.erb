@@ -5,6 +5,10 @@
 <ul class="list-group">
   <li>
     <%= @cocktail.name %>
+     <%= link_to "Remove",
+                  dose_path,
+                  method: :delete,
+                  data: { confirm: "Are you sure?" } %>
   </li>
   <% @cocktail.doses.each do |dose| %>
   <li class="list-group-item">
