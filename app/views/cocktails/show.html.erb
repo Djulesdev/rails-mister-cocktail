@@ -2,6 +2,10 @@
   <%= @cocktail.name%>
 </h1>
 
+<% if @cocktail.photo.attached? %>
+  <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
+
 <ul class="list-group">
   <li>
     <%= @cocktail.name %>
